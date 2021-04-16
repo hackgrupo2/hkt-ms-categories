@@ -45,9 +45,9 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public void saveCategory(CategoryDto dto) {
-        Category student = new Category();
-        BeanUtils.copyProperties(dto, student);
-        categoryRepository.save(student);
+        Category category = new Category();
+        BeanUtils.copyProperties(dto, category);
+        categoryRepository.save(category);
     }
 
     @Override

@@ -22,7 +22,7 @@ public class CategoryServiceImpl implements CategoryService {
     public CategoryDto getCategory(Integer categoryId) {
         CategoryDto dto = new CategoryDto();
         Category category = categoryRepository
-                .findById(categoryId).orElseThrow(() -> new CategoryNotFoundException());
+                .findById(categoryId).orElseThrow(() -> new CategoryNotFoundException("Categoría no encontrada"));
         BeanUtils.copyProperties(category, dto);
 
         return dto;

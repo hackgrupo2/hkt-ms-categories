@@ -13,7 +13,7 @@ public class ExceptionHandler {
     public ResponseEntity<?> resourceNotFoundHandling(CategoryNotFoundException exception, WebRequest request){
 
         ErrorDetail errorDetail =
-                new ErrorDetail(request.getDescription(false), Arrays.asList(exception.getMessage()));
+                new ErrorDetail(request.getDescription(false), exception.getMessage());
         return new ResponseEntity<>(errorDetail, HttpStatus.NOT_FOUND);
     }
 }

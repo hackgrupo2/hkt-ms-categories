@@ -9,5 +9,5 @@ import java.util.List;
 @NoArgsConstructor @AllArgsConstructor
 public class ErrorDetail {
     private String details;
-    private List<String> message;
+    private String message;
 }
